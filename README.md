@@ -15,13 +15,13 @@ I hope this will serve to improve the efficiency of your workflow and general me
 
 To use the `mommy` function, you can source the `shell-mommy.sh` script in your current shell or add it to your `~/.bashrc` file to have it available every time you open a new terminal.
 
-```
+```console
 . /path/to/shell-mommy.sh
 ```
 
 If you'd like it to always show a message after each command, you can define a custom `PROMPT_COMMAND` like so:
 
-```
+```console
 export PROMPT_COMMAND="mommy \\$\\(exit \$?\\); $PROMPT_COMMAND"
 ```
 
@@ -38,7 +38,7 @@ The `mommy` function has several customizable options that can be set using envi
 
 To add multiple possible values, separate them with a forward slash, for example:
 
-```sh
+```console
 export SHELL_MOMMYS_LITTLE="child/girl/boy"
 # ...
 $ mommy ls
@@ -58,7 +58,7 @@ mommy thinks her litle child earned a big hug~ ❤️
 
 To use the `mommy` function, simply pass a command as an argument and `mommy` will provide a supportive response based on the exit status of the command. Depending on the exit status, `mommy` will provide a response of praise or encouragement.
 
-```sh
+```console
 mommy ls
 # Output: Good girl! mommy's so proud of you! ❤️
 
@@ -68,10 +68,10 @@ mommy this-command-does-not-exist
 
 ## Example
 
-```
+```console
 # Set custom affectionate term and pronouns
 export SHELL_MOMMYS_LITTLE="kiddo"
-export SHELL_MOMMYS_PRONOUNS="them"
+export SHELL_MOMMYS_PRONOUNS="their"
 
 # Use the mommy function to run a command
 mommy ls
